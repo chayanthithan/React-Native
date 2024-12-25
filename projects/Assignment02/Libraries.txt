@@ -1,0 +1,3 @@
+for search -> react-native-google-places-autocomplete
+	     [ npm install react-native-google-places-autocomplete --save ]	
+for fireBase -> npm install firebase	

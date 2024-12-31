@@ -1,16 +1,16 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-export default function OptionCard({ option }) {
+export default function OptionCard({ option,selectedOption }) {
   return (
-    <View style={{
+    <View style={[{
       padding: 25,
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-between',
       backgroundColor: '#D3D3D3',
       borderRadius: 15
-    }}>
+    },selectedOption?.id == option?.id && {borderWidth:3,borderColor:'#a2a29e'}]}>
       <View >
         <Text style={{
           fontSize: 22,

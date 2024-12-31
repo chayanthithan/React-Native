@@ -1,3 +1,14 @@
-for search -> react-native-google-places-autocomplete
+01.for search -> react-native-google-places-autocomplete
 	     [ npm install react-native-google-places-autocomplete --save ]	
-for fireBase -> npm install firebase	
+02.for fireBase -> npm install firebase
+03.navigation stack -> npm install @react-navigation/stack	
+04.npm install --save react-native-calendar-picker
+05.npm install --save date-fns
+06.npm i moment  //used to conver date into anyformat
+07.npm install @google/generative-ai
+
+
+
+notes
+replace  -> it will not go back
+push  ->  it will go back

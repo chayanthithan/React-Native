@@ -1,6 +1,6 @@
 import { View, Text, FlatList, TouchableOpacity } from 'react-native'
 import React, { useContext, useEffect, useState } from 'react'
-import { Link, useNavigation } from 'expo-router'
+import { Link, router, useNavigation } from 'expo-router'
 import { SelectTravalesList } from '../../constants/options';
 import OptionCard from '../../components/CreateTrip/OptionCard';
 import { CreateTripContext } from './../../context/CreateTripContext'
@@ -22,8 +22,16 @@ export default function SelectTravaler() {
     setTripData({
       ...tripData,
       traveler:selectedTraveler})
+      
   },[selectedTraveler])
 
+  useEffect(()=>{
+    console.log('tripdta traveler:',tripData) 
+  },[tripData])
+
+  const navigateFunction=()=>{
+    router.push('/create-trip/select-dates')
+  }
 
   return (
     <View style={{
@@ -55,20 +63,21 @@ export default function SelectTravaler() {
               style={{
                 marginVertical: 10,
               }}>
-              <OptionCard option={item} selectedOption={selectedTraveler}></OptionCard>
+              <OptionCard option={item} selectedTraveler={selectedTraveler}></OptionCard>
             </TouchableOpacity>
           )}
         ></FlatList>
       </View>
-      <Link href={'/create-trip/select-dates'} style={{
+      <TouchableOpacity  style={{
         padding:15,
         backgroundColor:'black',
         borderRadius:15,
         marginTop:25,
         textAlign:'center'
       }}
-      >
-      <TouchableOpacity 
+      
+      
+      onPress={navigateFunction}
       >
         <Text style={{
           textAlign:'center',
@@ -76,7 +85,7 @@ export default function SelectTravaler() {
           fontSize:20
         }}>Continue</Text>
       </TouchableOpacity>
-      </Link>
+      {/* </Link> */}
     </View>
   )
 }

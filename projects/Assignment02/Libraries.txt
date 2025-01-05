@@ -12,3 +12,12 @@
 notes
 replace  -> it will not go back
 push  ->  it will go back
+
+
+
+map platforms google API = AIzaSyCpTS9k-mYCHRS0bglG_GEeO5zCqQFZ7HQ
+
+Api key = AIzaSyDhxHtTECPeisIQqtNqavwtk60UntLgqsU
+
+fire base ducumentation 
+https://firebase.google.com/docs/firestore/manage-data/add-data

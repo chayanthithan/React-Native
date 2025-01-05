@@ -17,6 +17,10 @@ export default function ReviewTrip() {
             headerTitle: ''
         })
     }, [])
+    useEffect(() => {
+        console.log("tripData trip review:", tripData)
+      }), [tripData]
+    
     return (
         <View style={{
             padding: 25,
@@ -34,8 +38,8 @@ export default function ReviewTrip() {
                     fontWeight: 'bold',
                     color:'gray',
                     textAlign:'justify',
-                    marginBottom:40,
-                    marginTop:20
+                    marginBottom:30,
+                    marginTop:10
                 }}>
                     Before generating your trip, please review your selection
                 </Text>
@@ -51,12 +55,23 @@ export default function ReviewTrip() {
                     gap: 20
                 }}>
                     {/* <Ionicons name="location" size={34} color="black" /> */}
-                    <View>
+                    <View style={{
+                        borderWidth:1,
+                        borderRadius:10,
+                        height:'100%',
+                        width:'20%',padding:10,
+                        }}>
                         <Text style={{
-                            fontSize: 30
+                            fontSize: 30,
+                        
                         }}>📅 </Text>
                     </View>
-                    <View>
+                    <View style={{
+                        borderWidth:1,
+                        borderRadius:10,
+                        height:'100%',
+                        width:'75%',padding:10
+                        }}>
                         <Text style={{
                             fontWeight: 'bold',
                             fontSize: 25,
@@ -64,8 +79,38 @@ export default function ReviewTrip() {
                         }}>Destination</Text>
                         <Text style={{
                             fontWeight: 'medium',
-                            fontSize: 20
-                        }}>{tripData?.locationInfo?.name}</Text>
+                            fontSize: 20,
+                            borderWidth:1,
+                            borderRadius:10,
+                            color:'white',
+                            backgroundColor:'black',
+                            padding:5,
+                            textAlign:'center',
+                            marginTop:5
+                        }}>{tripData?.locationInfo?.country}</Text>
+                        <Text style={{
+                            fontWeight: 'medium',
+                            fontSize: 20,
+                            borderWidth:1,
+                            borderRadius:10,
+                            color:'white',
+                            backgroundColor:'black',
+                            padding:5,
+                            textAlign:'center',
+                            marginTop:5
+                        }}
+                        >{tripData?.locationInfo?.city}</Text>
+                        <Text style={{
+                            fontWeight: 'medium',
+                            fontSize: 20,
+                            borderWidth:1,
+                            borderRadius:10,
+                            color:'white',
+                            backgroundColor:'black',
+                            padding:5,
+                            textAlign:'center',
+                            marginTop:5
+                        }}>{tripData?.locationInfo?.place}</Text>
 
                     </View>
                 </View>
@@ -81,12 +126,22 @@ export default function ReviewTrip() {
                     gap: 20
                 }}>
                     {/* <Ionicons name="location" size={34} color="black" /> */}
-                    <View>
+                    <View style={{
+                        borderWidth:1,
+                        borderRadius:10,
+                        height:'100%',
+                        width:'20%',padding:10
+                        }}>
                         <Text style={{
-                            fontSize: 30
+                            fontSize: 30,
                         }}>🏖️</Text>
                     </View>
-                    <View>
+                    <View style={{
+                        borderWidth:1,
+                        borderRadius:10,
+                        height:'100%',
+                        width:'75%',padding:10
+                        }}>
                         <Text style={{
                             fontWeight: 'bold',
                             fontSize: 25,
@@ -94,7 +149,14 @@ export default function ReviewTrip() {
                         }}>Travel Dates</Text>
                         <Text style={{
                             fontWeight: 'medium',
-                            fontSize: 20
+                            fontSize: 20,
+                            borderWidth:1,
+                            borderRadius:10,
+                            color:'white',
+                            backgroundColor:'black',
+                            padding:5,
+                            textAlign:'center',
+                            marginTop:5
                         }}>{moment(tripData?.startDate).format('DD MMM') + ' To ' +
                             moment(tripData?.endDate).format('DD MMM') + ' '}({tripData?.totalNumOfDays} Days)</Text>
 
@@ -113,12 +175,22 @@ export default function ReviewTrip() {
                     gap: 20
                 }}>
                     {/* <Ionicons name="location" size={34} color="black" /> */}
-                    <View>
+                    <View style={{
+                        borderWidth:1,
+                        borderRadius:10,
+                        height:'100%',
+                        width:'20%',padding:10
+                        }}>
                         <Text style={{
-                            fontSize: 30
+                            fontSize: 30,
                         }}>🧳</Text>
                     </View>
-                    <View>
+                    <View style={{
+                        borderWidth:1,
+                        borderRadius:10,
+                        height:'100%',
+                        width:'75%',padding:10
+                        }}>
                         <Text style={{
                             fontWeight: 'bold',
                             fontSize: 25,
@@ -126,7 +198,14 @@ export default function ReviewTrip() {
                         }}>Who is Traveling</Text>
                         <Text style={{
                             fontWeight: 'medium',
-                            fontSize: 20
+                            fontSize: 20,
+                            borderWidth:1,
+                            borderRadius:10,
+                            color:'white',
+                            backgroundColor:'black',
+                            padding:5,
+                            textAlign:'center',
+                            marginTop:5
                         }}>{tripData?.traveler?.title}</Text>
 
                     </View>
@@ -144,12 +223,22 @@ export default function ReviewTrip() {
                     gap: 20
                 }}>
                     {/* <Ionicons name="location" size={34} color="black" /> */}
-                    <View>
+                    <View style={{
+                        borderWidth:1,
+                        borderRadius:10,
+                        height:'100%',
+                        width:'20%',padding:10
+                        }}>
                         <Text style={{
-                            fontSize: 30
+                            fontSize: 30,
                         }}>💰</Text>
                     </View>
-                    <View>
+                    <View style={{
+                        borderWidth:1,
+                        borderRadius:10,
+                        height:'100%',
+                        width:'75%',padding:10
+                        }}>
                         <Text style={{
                             fontWeight: 'bold',
                             fontSize: 25,
@@ -157,7 +246,14 @@ export default function ReviewTrip() {
                         }}>Budget</Text>
                         <Text style={{
                             fontWeight: 'medium',
-                            fontSize: 20
+                            fontSize: 20,
+                            borderWidth:1,
+                            borderRadius:10,
+                            color:'white',
+                            backgroundColor:'black',
+                            padding:5,
+                            textAlign:'center',
+                            marginTop:5
                         }}>{tripData?.budget}</Text>
 
                     </View>
@@ -172,7 +268,7 @@ export default function ReviewTrip() {
                     padding: 15,
                     backgroundColor: 'black',
                     borderRadius: 15,
-                    marginTop: 250,
+                    marginTop: 50,
                     textAlign: 'center'
                 }}>
                 <Text style={{

@@ -22,6 +22,8 @@ export default function GenerateTrip() {
         setLoading(true);
         const FINAL_PROMPT = AI_PROMPT
         .replace('{location}',tripData?.locationInfo?.country || '')
+        .replace('{city}',tripData?.locationInfo?.city || '')
+        .replace('{place}',tripData?.locationInfo?.place || '') //modified 01.15
         .replace('{totaldays}',tripData?.totalNumOfDays || '0')
         .replace('{totalnights}',tripData?.totalNumOfDays-1 || '0')
         .replace('{budget}',tripData?.budget || '0')

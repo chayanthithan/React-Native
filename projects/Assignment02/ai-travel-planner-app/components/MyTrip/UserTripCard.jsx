@@ -1,9 +1,11 @@
-import { View, Text, Image } from 'react-native'
+import { View, Text, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import moment from 'moment'
-
+import { useRouter } from 'expo-router'
+// import UserTripCard from './UserTripCard';
 export default function UserTripCard({ trip }) {
 
+    const router = useRouter();
     const formatData = (data) => {
         return JSON.parse(data)
     }
@@ -22,6 +24,10 @@ export default function UserTripCard({ trip }) {
                     borderRadius:15
                 }}
             />
+            <TouchableOpacity  onPress={()=>router.push({pathname:'/trip-details',params: {
+        trip: JSON.stringify(trip), // Serialize trip data
+      },})}>
+                
             <View>
                 <Text style={{
                     fontWeight:'medium',
@@ -38,6 +44,7 @@ export default function UserTripCard({ trip }) {
                     color:'gray'
                 }}>{JSON.parse(trip.tripData)?.traveler?.title}</Text>
             </View>
+            </TouchableOpacity>
         </View>
     )
 }

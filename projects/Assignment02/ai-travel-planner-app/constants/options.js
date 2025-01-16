@@ -54,4 +54,5 @@ export const SelectBudgetOptions = [
     
 ]
 // we have to change the prompt
-export const AI_PROMPT = "Plan a trip to {location} for {totaldays} days and {totalnights} nights within a budget of {budget}. Include recommendations for accommodations, activities, and must-visit places that fit the {budget}. with json format";
+// export const AI_PROMPT = "Plan a trip to {location} for {totaldays} days and {totalnights} nights within a budget of {budget}. Include recommendations for accommodations, activities, and must-visit places that fit the {budget}. with json format";
+export const AI_PROMPT = "Create a detailed travel itinerary for a trip to {location} lasting {totaldays} days and {totalnights} nights, staying within a budget of {budget}. Provide recommendations in JSON format, including accommodations, activities, must-visit places, and dining_options that align with the {budget}. Ensure the recommendations include {place} located near {city}. For each recommendation, include a relevant photo URL or image reference. with json format";

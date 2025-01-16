@@ -11,10 +11,11 @@ export default function GenerateTrip() {
     const navigation = useNavigation();
     const { tripData, setTripData } = useContext(CreateTripContext);
     const [ loading, setLoading ] = useState(false);
-      const router = useRouter()
+    const router = useRouter()
+    const user = auth.currentUser
     useEffect(()=>{
-        tripData&&GenerateAiTrip()
-    },[tripData])
+        GenerateAiTrip()
+    },[])
 
 
     const GenerateAiTrip =async () => {
@@ -34,8 +35,8 @@ export default function GenerateTrip() {
     const tripResonse = JSON.parse(result.response.text());
     
     // Add a new document in collection "cities"
-    const result_ = await setDoc(doc(db, "UserTrip", docId), {
-      userEmail: "Los Angeles",
+    const result_ = await setDoc(doc(db, "UserTrips", docId), {
+      userEmail:user.email,
       tripPlan:tripResonse,//AI result
       tripData:JSON.stringify(tripData), //user Input
         docId:docId

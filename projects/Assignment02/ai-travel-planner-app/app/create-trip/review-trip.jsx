@@ -57,59 +57,61 @@ export default function ReviewTrip() {
                     {/* <Ionicons name="location" size={34} color="black" /> */}
                     <View style={{
                         borderWidth:1,
-                        borderRadius:10,
                         height:'100%',
                         width:'20%',padding:10,
+                        borderRadius:10,
+                        backgroundColor:'black',
                         }}>
                         <Text style={{
                             fontSize: 30,
-                        
+                            borderRadius:25,
+                            backgroundColor:'white',
+                            textAlign:'center',
+                            paddingVertical:10,
+                            paddingHorizontal:7,
                         }}>📅 </Text>
                     </View>
                     <View style={{
                         borderWidth:1,
                         borderRadius:10,
                         height:'100%',
-                        width:'75%',padding:10
+                        width:'75%',padding:10,
+                        backgroundColor:'#D3D3D3'
                         }}>
                         <Text style={{
                             fontWeight: 'bold',
                             fontSize: 25,
-                            color: 'gray'
+                            color: 'gray',
+                            textAlign:'center'
                         }}>Destination</Text>
                         <Text style={{
-                            fontWeight: 'medium',
+                            fontWeight: 'bold',
                             fontSize: 20,
-                            borderWidth:1,
+                            // borderWidth:1,
                             borderRadius:10,
-                            color:'white',
-                            backgroundColor:'black',
+                            color:'black',
+                            // backgroundColor:'gray',
                             padding:5,
-                            textAlign:'center',
+                            textAlign:'left',
                             marginTop:5
                         }}>{tripData?.locationInfo?.country}</Text>
                         <Text style={{
-                            fontWeight: 'medium',
+                            fontWeight: 'bold',
                             fontSize: 20,
-                            borderWidth:1,
+                            // borderWidth:1,
                             borderRadius:10,
-                            color:'white',
-                            backgroundColor:'black',
+                            color:'black',
+                            // backgroundColor:'black',
                             padding:5,
-                            textAlign:'center',
-                            marginTop:5
+                            textAlign:'left',
+                            // marginTop:5
                         }}
                         >{tripData?.locationInfo?.city}</Text>
                         <Text style={{
-                            fontWeight: 'medium',
+                            fontWeight: 'bold',
                             fontSize: 20,
-                            borderWidth:1,
-                            borderRadius:10,
-                            color:'white',
-                            backgroundColor:'black',
+                            color:'black',
                             padding:5,
-                            textAlign:'center',
-                            marginTop:5
                         }}>{tripData?.locationInfo?.place}</Text>
 
                     </View>
@@ -130,32 +132,36 @@ export default function ReviewTrip() {
                         borderWidth:1,
                         borderRadius:10,
                         height:'100%',
-                        width:'20%',padding:10
+                        width:'20%',padding:10,
+                        backgroundColor:'black'
                         }}>
                         <Text style={{
                             fontSize: 30,
+                            borderRadius:25,
+                            backgroundColor:'white',
+                            textAlign:'center',
+                            paddingVertical:10,
+                            paddingHorizontal:7,
                         }}>🏖️</Text>
                     </View>
                     <View style={{
                         borderWidth:1,
                         borderRadius:10,
                         height:'100%',
-                        width:'75%',padding:10
+                        width:'75%',padding:10,
+                        backgroundColor:'#D3D3D3'
                         }}>
                         <Text style={{
                             fontWeight: 'bold',
                             fontSize: 25,
-                            color: 'gray'
+                            color: 'gray',
+                            textAlign:'center'
                         }}>Travel Dates</Text>
                         <Text style={{
-                            fontWeight: 'medium',
-                            fontSize: 20,
-                            borderWidth:1,
-                            borderRadius:10,
-                            color:'white',
-                            backgroundColor:'black',
-                            padding:5,
-                            textAlign:'center',
+                             fontWeight: 'bold',
+                             fontSize: 20,
+                             color:'black',
+                             padding:5,
                             marginTop:5
                         }}>{moment(tripData?.startDate).format('DD MMM') + ' To ' +
                             moment(tripData?.endDate).format('DD MMM') + ' '}({tripData?.totalNumOfDays} Days)</Text>
@@ -179,33 +185,37 @@ export default function ReviewTrip() {
                         borderWidth:1,
                         borderRadius:10,
                         height:'100%',
-                        width:'20%',padding:10
+                        width:'20%',padding:10,
+                        backgroundColor:'black'
                         }}>
                         <Text style={{
                             fontSize: 30,
+                            borderRadius:25,
+                            backgroundColor:'white',
+                            textAlign:'center',
+                            paddingVertical:10,
+                            paddingHorizontal:7,
                         }}>🧳</Text>
                     </View>
                     <View style={{
                         borderWidth:1,
                         borderRadius:10,
                         height:'100%',
-                        width:'75%',padding:10
+                        width:'75%',padding:10,
+                        backgroundColor:'#D3D3D3'
                         }}>
                         <Text style={{
                             fontWeight: 'bold',
                             fontSize: 25,
-                            color: 'gray'
+                            color: 'gray',
+                            textAlign:'center'
                         }}>Who is Traveling</Text>
                         <Text style={{
-                            fontWeight: 'medium',
-                            fontSize: 20,
-                            borderWidth:1,
-                            borderRadius:10,
-                            color:'white',
-                            backgroundColor:'black',
-                            padding:5,
-                            textAlign:'center',
-                            marginTop:5
+                             fontWeight: 'bold',
+                             fontSize: 20,
+                             color:'black',
+                             padding:5,
+                             
                         }}>{tripData?.traveler?.title}</Text>
 
                     </View>
@@ -227,33 +237,36 @@ export default function ReviewTrip() {
                         borderWidth:1,
                         borderRadius:10,
                         height:'100%',
-                        width:'20%',padding:10
+                        width:'20%',padding:10,
+                        backgroundColor:'black'
                         }}>
                         <Text style={{
                             fontSize: 30,
+                            borderRadius:25,
+                            backgroundColor:'white',
+                            textAlign:'center',
+                            paddingVertical:10,
+                            paddingHorizontal:7,
                         }}>💰</Text>
                     </View>
                     <View style={{
                         borderWidth:1,
                         borderRadius:10,
                         height:'100%',
-                        width:'75%',padding:10
+                        width:'75%',padding:10,
+                        backgroundColor:'#D3D3D3'
                         }}>
                         <Text style={{
                             fontWeight: 'bold',
                             fontSize: 25,
-                            color: 'gray'
+                            color: 'gray',
+                            textAlign:'center'
                         }}>Budget</Text>
                         <Text style={{
-                            fontWeight: 'medium',
-                            fontSize: 20,
-                            borderWidth:1,
-                            borderRadius:10,
-                            color:'white',
-                            backgroundColor:'black',
-                            padding:5,
-                            textAlign:'center',
-                            marginTop:5
+                             fontWeight: 'bold',
+                             fontSize: 20,
+                             color:'black',
+                             padding:5,
                         }}>{tripData?.budget}</Text>
 
                     </View>
